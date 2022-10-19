@@ -8,7 +8,7 @@ export default function Card(props) {
         <a href='#'>
           <h5 className='mb-2 text-xl font-bold tracking-tight text-white'>{props.title}</h5>
         </a>
-        <p className='mb-3 font-semibold text-[#919191]'>{props.year.slice(0, 4)}</p>
+        <p className='mb-3 font-semibold text-[#919191]'>{props.year}</p>
       </div>
     </div>
   )
