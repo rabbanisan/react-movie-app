@@ -1,19 +1,19 @@
 * {
-  paddin: 0;
-  margin:0;
-  box-sizing:border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 html {
-  background-color: black;
+	background-color: black;
 }
 
-.input-search{
-  border: none;
-  outline:none;
+.input-search {
+	border: none;
+	outline: none;
 }
 
-.input-search:active{
-  border: none;
-  outline:none;
+.input-search:active {
+	border: none;
+	outline: none;
 }
