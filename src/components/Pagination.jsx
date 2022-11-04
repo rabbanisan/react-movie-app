@@ -1,15 +1,8 @@
-import { useState } from "react";
 import PageNav from "./Page.nav";
 
 export default function Pagination(props) {
-	const { setCurrentPageState } = props;
-	const [number, setNumber] = useState(1);
+	const { setCurrentPageState, currentPage } = props;
 	const page = [1, 2, 3, 4, 5];
-
-	const setNumberState = (num) => {
-		num += 1;
-		setNumber(num);
-	};
 
 	return (
 		<nav aria-label="Page navigation example" className="flex justify-center">
@@ -41,9 +34,7 @@ export default function Pagination(props) {
 							key={i}
 							crnPage={data}
 							setCrnPage={setCurrentPageState}
-							num={i}
-							setNum={setNumberState}
-							number={number}
+							currentPage={currentPage}
 						/>
 					);
 				})}
