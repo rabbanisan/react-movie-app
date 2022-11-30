@@ -17,7 +17,7 @@ export default function Card(props) {
 				<p className="mb-3 font-semibold text-[#919191]">
 					{props.year.slice(0, 4)}
 				</p>
-			</div>
+			</div>	
 		</div>
 	);
 }

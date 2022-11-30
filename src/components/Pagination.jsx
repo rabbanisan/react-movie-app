@@ -1,7 +1,7 @@
 import PageNav from "./Page.nav";
 
 export default function Pagination(props) {
-	const { setCurrentPageState, currentPage } = props;
+	const { setCurrentPageState, setNumber, number } = props;
 	const page = [1, 2, 3, 4, 5];
 
 	return (
@@ -34,7 +34,9 @@ export default function Pagination(props) {
 							key={i}
 							crnPage={data}
 							setCrnPage={setCurrentPageState}
-							currentPage={currentPage}
+							num={i}
+							number={number}
+							setNum={setNumber}
 						/>
 					);
 				})}

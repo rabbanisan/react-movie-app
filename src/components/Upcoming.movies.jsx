@@ -6,6 +6,7 @@ import Pagination from "./Pagination";
 export default function UpcomingMovies() {
 	const [currentPage, setCurrentPage] = useState(1);
 	const [upcoming, setUpcoming] = useState([]);
+	const [number, setNumber] = useState();
 	const baseURL =
 		"https://api.themoviedb.org/3/movie/upcoming?api_key=0737ff4618e7fa07d047074dba98ef7b&language=en-US&";
 
@@ -23,11 +24,17 @@ export default function UpcomingMovies() {
 		setCurrentPage(crnPage);
 	};
 
+	const setNumberState = (num) => {
+		num += 1;
+		setNumber(num);
+	};
+
 	return (
 		<section className="upcoming py-10 bg-[#171717]">
 			<Pagination
 				setCurrentPageState={setCurrentPageState}
-				currentPage={currentPage}
+				setNumber={setNumberState}
+				number={number}
 			/>
 			<div className="card-container flex flex-row flex-wrap justify-center mt-5 pt-4">
 				{upcoming.map((data) => {
@@ -35,6 +42,7 @@ export default function UpcomingMovies() {
 						<Card
 							key={data.id}
 							poster={data.poster_path}
+							S
 							title={data.original_title}
 							year={data.release_date}
 							className={`card-upcoming w-[15%] bg-transparent rounded-lg shadow-md mx-5`}
@@ -44,7 +52,8 @@ export default function UpcomingMovies() {
 			</div>
 			<Pagination
 				setCurrentPageState={setCurrentPageState}
-				currentPage={currentPage}
+				setNumber={setNumberState}
+				number={number}
 			/>
 		</section>
 	);
